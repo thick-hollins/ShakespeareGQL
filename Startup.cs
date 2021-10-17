@@ -6,8 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ShakespeareGQL.GraphQL.Platforms;
-using ShakespeareGQL.GraphQL.Commands;
 
 namespace gql
 {
@@ -28,9 +26,6 @@ namespace gql
             services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
-                .AddMutationType<Mutation>()
-                .AddType<PlatformType>()
-                .AddType<CommandType>()
                 .AddFiltering()
                 .AddSorting();
         }

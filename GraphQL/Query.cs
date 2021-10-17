@@ -11,17 +11,17 @@ namespace ShakespeareGQL.GraphQL
         [UseDbContext(typeof(AppDbContext))]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Platform> GetPlatform([ScopedService] AppDbContext context)
+        public IQueryable<Chapter> GetPlatform([ScopedService] AppDbContext context)
         {
-            return context.Platforms;
+            return context.Chapters;
         }
 
         [UseDbContext(typeof(AppDbContext))]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Command> GetCommand([ScopedService] AppDbContext context)
+        public IQueryable<Character> GetCommand([ScopedService] AppDbContext context)
         {
-            return context.Commands;
+            return context.Characters;
         }
     }
 }
