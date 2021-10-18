@@ -16,7 +16,7 @@ namespace ShakespeareGQL.Data.Imports
             get => _description;
             set
             {   
-                if (value == "\"---\"")
+                if (value.StartsWith("---"))
                 {
                     _description = null;
                 }
