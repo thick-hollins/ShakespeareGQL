@@ -5,9 +5,6 @@ namespace ShakespeareGQL.Models
 {
     public class Chapter
     {
-      [Required]
-      public string WorkId { get; set; }
-
       [Key]
       public int ChapterId { get; set; }
 
@@ -19,5 +16,10 @@ namespace ShakespeareGQL.Models
       
       public string Description { get; set; }
 
+
+      [Required]
+      public string WorkId { get; set; }
+
+      public Work Work { get; set; }
     }
 } 
