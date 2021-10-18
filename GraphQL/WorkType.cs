@@ -17,6 +17,12 @@ namespace ShakespeareGQL.GraphQL
                 .ResolveWith<Resolvers>(w => w.GetChapters(default!, default!))
                 .UseDbContext<AppDbContext>()
                 .Description("This is this the list of chapters in the work");
+
+            descriptor
+                .Field(w => w.Paragraphs)
+                .ResolveWith<Resolvers>(w => w.GetParagraphs(default!, default!))
+                .UseDbContext<AppDbContext>()
+                .Description("This is this the list of paragraphs in the work");
         }
 
         private class Resolvers
@@ -24,6 +30,11 @@ namespace ShakespeareGQL.GraphQL
             public IQueryable<Chapter> GetChapters(Work work, [ScopedService] AppDbContext context)
             {
                 return context.Chapters.Where(ch => ch.WorkId == work.WorkId);
+            }
+
+            public IQueryable<Paragraph> GetParagraphs(Work work, [ScopedService] AppDbContext context)
+            {
+                return context.Paragraphs.Where(p => p.WorkId == work.WorkId);
             }
         }
     }
