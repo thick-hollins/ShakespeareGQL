@@ -26,6 +26,8 @@ namespace gql
             services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
+                .AddType<ChapterType>()
+                .AddType<WorkType>()
                 .AddFiltering()
                 .AddSorting();
         }
