@@ -28,6 +28,8 @@ namespace gql
                 .AddQueryType<Query>()
                 .AddType<ChapterType>()
                 .AddType<WorkType>()
+                .AddType<ParagraphType>()
+                .AddType<CharacterType>()
                 .AddFiltering()
                 .AddSorting();
         }
