@@ -8,13 +8,7 @@ namespace ShakespeareGQL.Models
       public int ParagraphId { get; set; }
 
       [Required]
-      public string WorkId { get; set; }
-
-      [Required]
       public int ParagraphNum { get; set; }
-
-      [Required]
-      public string CharId { get; set; }
       
       [Required]
       public string PlainText { get; set; }
@@ -33,5 +27,16 @@ namespace ShakespeareGQL.Models
 
       [Required]
       public int WordCount { get; set; }
+
+
+      [Required]
+      public string WorkId { get; set; }
+
+      public Work Work { get; set; }
+
+      [Required]
+      public string CharId { get; set; }
+
+      public Character Character { get; set; }
     }
 } 

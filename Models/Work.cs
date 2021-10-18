@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ShakespeareGQL.Models
@@ -29,5 +30,10 @@ namespace ShakespeareGQL.Models
 
       [Required]
       public int TotalParagraphs { get; set; }
+
+
+      public List<Chapter> Chapters { get; set; }
+
+      public List<Paragraph> Paragraphs { get; set; }
     }
 } 

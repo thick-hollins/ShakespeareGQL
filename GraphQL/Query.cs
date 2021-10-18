@@ -11,7 +11,7 @@ namespace ShakespeareGQL.GraphQL
         [UseDbContext(typeof(AppDbContext))]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Chapter> GetPlatform([ScopedService] AppDbContext context)
+        public IQueryable<Chapter> GetChapter([ScopedService] AppDbContext context)
         {
             return context.Chapters;
         }
@@ -19,9 +19,33 @@ namespace ShakespeareGQL.GraphQL
         [UseDbContext(typeof(AppDbContext))]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<Character> GetCommand([ScopedService] AppDbContext context)
+        public IQueryable<Character> GetCharacter([ScopedService] AppDbContext context)
         {
             return context.Characters;
         }
+
+        [UseDbContext(typeof(AppDbContext))]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Work> GetWork([ScopedService] AppDbContext context)
+        {
+            return context.Works;
+        }
+        
+        [UseDbContext(typeof(AppDbContext))]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<WordForm> GetWordForm([ScopedService] AppDbContext context)
+        {
+            return context.WordForms;
+        }
+        [UseDbContext(typeof(AppDbContext))]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Paragraph> GetParagraph([ScopedService] AppDbContext context)
+        {
+            return context.Paragraphs;
+        }
+
     }
 }

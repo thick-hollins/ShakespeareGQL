@@ -9,10 +9,6 @@ namespace ShakespeareGQL.Models
 
       [Required]
       public string PlainText { get; set; }
-
-      public string PhoneticText { get; set; }
-
-      public string StemText { get; set; }
       
       [Required]
       public int Occurences { get; set; }
