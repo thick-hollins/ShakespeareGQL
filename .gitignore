@@ -3,4 +3,4 @@ Migrations
 [Oo]bj
 [Bb]in
 .vscode
-**/docker-compose*
+docker-compose
